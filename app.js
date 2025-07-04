@@ -12,6 +12,10 @@ mongoose.connect(process.env.MONGO_uRI)  //mangoos connect 27017 is a code of mo
 app.use(express.json()); //middleware                                 
 app.use(cors())
 
+app.get("/",(req, res)=>{
+    res.send("Blog Post Backend Working")
+})
+
 app.post("/posts", async (req, res) => {
     try {
         const { title, description, author } = req.body;
