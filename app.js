@@ -5,7 +5,7 @@ const cors=require("cors");
 const app = express(); //first express
 require('dotenv').config()
 
-mongoose.connect(process.env.MONGO_uRI)  //mangoos connect 27017 is a code of mongoos
+mongoose.connect(process.env.MONGO_URI)  //mangoos connect 27017 is a code of mongoos
     .then(() => { console.log("database connected successfully") })
     .catch((err) => { console.log("something went wrong", err) })
 
